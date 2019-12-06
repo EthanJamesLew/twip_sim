@@ -55,9 +55,9 @@ class TWIPZi(SysBase):
     '''
     def __init__(self):
         SysBase.__init__(self, n=6)
-        default_bot = {"Mw": 0.8, "Iw": 0.02, "r" : .2, "m" : 0.5,
-             "l" : .15, "d" : .6, "M" : 0.7, "IM": 0.08,
-                "Ip": 0.06, "g": 9.81 }
+        default_bot = {"Mw": 0.02, "Iw": 33.6e-6, "r" : .04, "m" : 0.0,
+             "l" : .047, "d" : .161, "M" : 1.22, "IM": 1.776e-3,
+                "Ip": 2.601e-3, "g": 9.81 }
         self.parameters = default_bot
         self.equations = "Zi et al."
         self.q = np.zeros((6))

@@ -29,7 +29,7 @@ class DCMotor(SysBase):
         # these values were taken from a pololu motor: https://www.pololu.com/product/3202, 550 RPM model
         #default_motor = {'J' : 127e-6, 'L': 15.38e-3, 'R': 11.1, 'Km': 0.0993, 'Ke': 0.1893, 'd':0.0}
 
-        default_motor = {'J' : 0.001, 'L': 0.05, 'R': 1, 'Km': 0.05, 'Ke': 0.05, 'd':0.3, 'b':0.0001}
+        default_motor = {'J' : 32e-6, 'L': 15.38e-3, 'R': 11, 'Km': 0.0993, 'Ke': 0.1893, 'd':0.0, 'b':0.01}
         self.parameters = default_motor
         self.equations = 'Vukosavic'
 

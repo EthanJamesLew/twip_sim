@@ -30,6 +30,7 @@ from twip import TWIPZi, wraptopi
 import numpy as np
 from numpy import sin, cos, floor
 import time
+import OpenGL
 
 def obj_to_mesh(obj_context, object_name):
     ''' Take geometry contents from a pywavefront scene and put it in a gl.MeshData structure
@@ -215,6 +216,8 @@ class TWIPWidget(gl.GLViewWidget):
         try:
             self.paintGL()
         except ZeroDivisionError:
+            pass
+        except OpenGL.error.Error:
             pass
 
     def set_c(self, c):
